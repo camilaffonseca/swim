@@ -1,13 +1,15 @@
 import { StyleSheet } from 'react-native'
 
+import { white, black } from '../../modules/colors'
+
 export default StyleSheet.create({
   container: {
     flexDirection: 'row',
-    backgroundColor: '#fff',
+    backgroundColor: white,
     height: 48,
     borderRadius: 8,
     alignItems: 'center',
-    shadowColor: '#000',
+    shadowColor: black,
     shadowOpacity: 0.06,
     shadowOffset: { width: 0, height: 5 },
     shadowRadius: 15,
