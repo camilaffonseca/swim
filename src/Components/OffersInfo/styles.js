@@ -1,5 +1,7 @@
 import { StyleSheet } from 'react-native'
 
+import { red } from '../../modules/colors'
+
 export default StyleSheet.create({
   infoContainer: {
     flexDirection: 'row',
@@ -22,7 +24,7 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   discountContainer: {
-    backgroundColor: '#D51648',
+    backgroundColor: red,
     borderRadius: 4,
     paddingVertical: 4,
     paddingHorizontal: 4.5,
