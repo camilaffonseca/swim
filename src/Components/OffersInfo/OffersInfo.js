@@ -6,53 +6,27 @@ import TextComponent from '../TextComponent'
 
 import styles from './styles'
 
-import { white, red, gray } from '../../modules/colors'
-
 const OffersInfo = ({ offerData: { item: offerData } }) => (
   <View>
     <Image style={styles.image} source={offerData.image} />
     <View style={styles.infoContainer}>
       <Image source={offerData.logo} />
       <View style={styles.info}>
-        <TextComponent customStyle={{ color: red, marginBottom: 2 }}>
+        <TextComponent customStyle={styles.offerName}>
           {offerData.name}
         </TextComponent>
-        <TextComponent
-          customStyle={{
-            lineHeight: 20,
-            fontWeight: '700',
-            fontSize: 16,
-            marginBottom: 8,
-          }}>
-          Get a discount on your first hair cut and blow dry.
+        <TextComponent customStyle={styles.offerDescription}>
+          {offerData.description}
         </TextComponent>
         <View style={styles.prices}>
-          <TextComponent
-            customStyle={{
-              color: gray,
-              marginRight: 8,
-              textDecorationLine: 'line-through',
-              fontWeight: '700',
-              lineHeight: 16,
-            }}>
+          <TextComponent customStyle={styles.offerOldPrice}>
             {offerData.oldPrice}
           </TextComponent>
-          <TextComponent
-            customStyle={{
-              fontSize: 16,
-              lineHeight: 20,
-              fontWeight: '700',
-              marginRight: 16,
-            }}>
+          <TextComponent customStyle={styles.offerNewPrice}>
             {offerData.newPrice}
           </TextComponent>
           <View style={styles.discountContainer}>
-            <TextComponent
-              customStyle={{
-                lineHeight: 16,
-                fontWeight: '700',
-                color: white,
-              }}>
+            <TextComponent customStyle={styles.offerDiscount}>
               {offerData.discount}
             </TextComponent>
           </View>

@@ -6,19 +6,16 @@ import TextComponent from '../TextComponent'
 
 import styles from './styles'
 
-import { gray } from '../../modules/colors'
-
 const cardsIcon = require('../../images/cards.png')
 
 const InfoCard = () => (
   <View style={styles.container}>
     <Image style={styles.cardsIcon} source={cardsIcon} />
     <View style={styles.info}>
-      <TextComponent
-        customStyle={{ fontSize: 22, fontWeight: '700', lineHeight: 24 }}>
+      <TextComponent customStyle={styles.cardTitle}>
         Link Your First Card
       </TextComponent>
-      <TextComponent customStyle={{ lineHeight: 16, color: gray }}>
+      <TextComponent customStyle={styles.cardDescription}>
         Then you’ll automatically be rewarded with coins whenever making
         purchases
       </TextComponent>

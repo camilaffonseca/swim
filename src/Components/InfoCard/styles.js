@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { white, black, lightGray } from '../../modules/colors'
+import { white, black, lightGray, gray } from '../../modules/colors'
 
 export default StyleSheet.create({
   container: {
@@ -24,4 +24,6 @@ export default StyleSheet.create({
   info: {
     flex: 1,
   },
+  cardTitle: { fontSize: 22, fontWeight: '700', lineHeight: 24 },
+  cardDescription: { lineHeight: 16, color: gray },
 })

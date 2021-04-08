@@ -14,6 +14,7 @@ const offersInfoData = [
     image: require('../../images/offersInfoImages/haircut-image.png'),
     logo: require('../../images/offersInfoImages/haircut-logo.png'),
     name: 'HAIRCUT',
+    description: 'Get a discount on your first hair cut and blow dry.',
     oldPrice: '$ 10,99',
     newPrice: '$ 5,49',
     discount: '-50%',
@@ -23,6 +24,8 @@ const offersInfoData = [
     image: require('../../images/offersInfoImages/mcdonalds-image.png'),
     logo: require('../../images/offersInfoImages/mcdonalds-logo.png'),
     name: "MCDONALD'S",
+    description:
+      "Big Mac® or Quarter Pounder® - Half Price at McDonnald's San Diego.",
     oldPrice: '$ 10,99',
     newPrice: '$ 5,49',
     discount: '-50%',

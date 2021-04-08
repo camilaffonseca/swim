@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { red } from '../../modules/colors'
+import { white, red, gray } from '../../modules/colors'
 
 export default StyleSheet.create({
   infoContainer: {
@@ -28,5 +28,30 @@ export default StyleSheet.create({
     borderRadius: 4,
     paddingVertical: 4,
     paddingHorizontal: 4.5,
+  },
+  offerName: { color: red, marginBottom: 2 },
+  offerDescription: {
+    lineHeight: 20,
+    fontWeight: '700',
+    fontSize: 16,
+    marginBottom: 8,
+  },
+  offerOldPrice: {
+    color: gray,
+    marginRight: 8,
+    textDecorationLine: 'line-through',
+    fontWeight: '700',
+    lineHeight: 16,
+  },
+  offerNewPrice: {
+    fontSize: 16,
+    lineHeight: 20,
+    fontWeight: '700',
+    marginRight: 16,
+  },
+  offerDiscount: {
+    lineHeight: 16,
+    fontWeight: '700',
+    color: white,
   },
 })
