@@ -114,7 +114,6 @@
 				27D76A3441C949ED530A60BD /* Pods-TestprojectReactnativeStylesheet-TestprojectReactnativeStylesheetTests.debug.xcconfig */,
 				CF4526A2EED84E3F28E825A2 /* Pods-TestprojectReactnativeStylesheet-TestprojectReactnativeStylesheetTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
