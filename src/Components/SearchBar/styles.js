@@ -18,4 +18,7 @@ export default StyleSheet.create({
   searchIcon: {
     margin: 16,
   },
+  textInput: {
+    flex: 1
+  }
 })
