@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { SafeAreaView, View, FlatList, StatusBar } from 'react-native'
 
 import OffersInfo from '../../Components/OffersInfo'

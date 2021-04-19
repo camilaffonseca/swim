@@ -1,7 +1,20 @@
+import 'react-native-gesture-handler'
+
 import React from 'react'
+import { NavigationContainer } from '@react-navigation/native'
 
-import Home from './views/Home'
+import Routes from './routes'
 
-const App = () => <Home />
+import { AuthProvider } from './context/auth'
+
+const App = () => {
+  return (
+    <NavigationContainer>
+      <AuthProvider>
+        <Routes />
+      </AuthProvider>
+    </NavigationContainer>
+  )
+}
 
 export default App
