@@ -12,6 +12,8 @@ target 'TestprojectReactnativeStylesheet' do
     :hermes_enabled => false
   )
 
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
   target 'TestprojectReactnativeStylesheetTests' do
     inherit! :complete
     # Pods for testing
