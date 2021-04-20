@@ -1,6 +1,6 @@
 import _fakeDB from '../fakeDB.json'
 
-export const ValidateSession = ({ token }) =>
+export const validateSession = ({ token }) =>
   new Promise((resolve, reject) => {
     if (token === _fakeDB.token) {
       resolve({
@@ -23,7 +23,7 @@ export const ValidateSession = ({ token }) =>
     }
   })
 
-export const SignIn = ({ email, password }) =>
+export const signIn = ({ email, password }) =>
   new Promise((resolve, reject) => {
     if (email === _fakeDB.email && password === _fakeDB.password) {
       resolve({

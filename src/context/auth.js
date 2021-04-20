@@ -1,7 +1,12 @@
 import React, { createContext, useState, useEffect, useContext } from 'react'
 import AsyncStorage from '@react-native-community/async-storage'
 
-import { SignIn, ValidateSession } from '../services/auth'
+import {
+  getStoragedToken,
+  setStoragedToken,
+  removeStoragedToken,
+} from '../helpers/asyncStorage'
+import { signIn, validateSession } from '../services/auth'
 
 const AuthContext = createContext({ signed: true })
 
@@ -22,18 +27,15 @@ const AuthProvider = ({ children }) => {
 
   useEffect(() => {
     const loadStoragedData = async () => {
-      const storagedToken = await AsyncStorage.getItem(
-        '@TestprojectReactnativeStylesheet:token',
-      )
-
-      if (!storagedToken) {
-        logout()
-        setLoading(false)
-        return
-      }
-
       try {
-        const response = await ValidateSession({ token: storagedToken })
+        const storagedToken = await getStoragedToken()
+
+        if (!storagedToken) {
+          logout()
+          return
+        }
+
+        const response = await validateSession({ token: storagedToken })
 
         setUser(response?.user)
         setToken(response?.token)
@@ -50,23 +52,20 @@ const AuthProvider = ({ children }) => {
   const getToken = () => token
 
   const login = async ({ email, password }) => {
-    const response = await SignIn({ email, password })
+    const response = await signIn({ email, password })
 
     if (response?.statusCode !== 200) {
       logout()
       throw new Error(response)
     }
 
-    await AsyncStorage.setItem(
-      '@TestprojectReactnativeStylesheet:token',
-      response?.token,
-    )
+    await setStoragedToken(response?.token)
 
     setUser(response.user)
   }
 
   const logout = async () => {
-    await AsyncStorage.setItem('@TestprojectReactnativeStylesheet:token', '')
+    await removeStoragedToken()
 
     setUser(undefined)
     setToken(undefined)
