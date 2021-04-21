@@ -1,8 +1,8 @@
 import React from 'react'
 import { View, Image, TextInput } from 'react-native'
 
-const searchIcon = require('../../images/search-icon.png')
-import { gray } from '../../modules/colors'
+const searchIcon = require('#/images/search-icon.png')
+import colors from '#/constants/colors'
 import styles from './styles'
 
 const SearchBar = () => (
@@ -10,7 +10,7 @@ const SearchBar = () => (
     <Image style={styles.searchIcon} source={searchIcon} />
     <TextInput
       placeholder='Try "Burgers"'
-      placeholderTextColor={gray}
+      placeholderTextColor={colors.gray}
       style={styles.textInput}
     />
   </View>

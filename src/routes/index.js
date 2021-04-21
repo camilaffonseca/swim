@@ -4,7 +4,7 @@ import { View, ActivityIndicator, StyleSheet } from 'react-native'
 import UnauthenticatedRoutes from './unauthenticated.routes'
 import AuthenticatedRoutes from './authenticated.routes'
 
-import { useUser } from '../context/auth'
+import { useUser } from '#/context/auth'
 
 const Routes = () => {
   const { signed, loading } = useUser()

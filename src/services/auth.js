@@ -1,4 +1,4 @@
-import _fakeDB from '../fakeDB.json'
+import _fakeDB from '#/fakeDB.json'
 
 export const validateSession = ({ token }) =>
   new Promise((resolve, reject) => {

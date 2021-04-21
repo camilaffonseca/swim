@@ -1,7 +1,7 @@
 import React from 'react'
 import { View, Image } from 'react-native'
 
-import TextComponent from '../TextComponent'
+import TextComponent from '#/components/TextComponent'
 
 import styles from './styles'
 

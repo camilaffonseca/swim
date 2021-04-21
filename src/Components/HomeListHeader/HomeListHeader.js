@@ -1,11 +1,11 @@
 import React from 'react'
 import { View, TouchableOpacity } from 'react-native'
 
-import SearchBar from '../SearchBar'
-import TextComponent from '../TextComponent'
-import InfoCard from '../InfoCard'
+import SearchBar from '#/components/SearchBar'
+import TextComponent from '#/components/TextComponent'
+import InfoCard from '#/components/InfoCard'
 
-import { useUser } from '../../context/auth'
+import { useUser } from '#/context/auth'
 import styles from './styles'
 
 const HomeListHeader = () => {

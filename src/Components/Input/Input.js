@@ -1,9 +1,9 @@
 import React from 'react'
 import { View, TextInput } from 'react-native'
 
-import TextComponent from '../TextComponent'
+import TextComponent from '#/components/TextComponent'
 
-import { gray } from '../../modules/colors'
+import colors from '#/constants/colors'
 import styles from './styles'
 
 const Input = ({ label, errors, style, ...props }) => {
@@ -18,12 +18,12 @@ const Input = ({ label, errors, style, ...props }) => {
     <View style={style}>
       <TextComponent customStyle={labelErrorMixin}>{label}</TextComponent>
       <TextInput
-        placeholderTextColor={gray}
+        placeholderTextColor={colors.gray}
         autoCorrect={false}
         spellCheck={false}
         autoCapitalize="none"
         returnKeyType="next"
-        selectionColor={gray}
+        selectionColor={colors.gray}
         style={inputStyleMixin}
         {...props}
       />

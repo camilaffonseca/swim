@@ -1,12 +1,11 @@
 import React, { createContext, useState, useEffect, useContext } from 'react'
-import AsyncStorage from '@react-native-community/async-storage'
 
 import {
   getStoragedToken,
   setStoragedToken,
   removeStoragedToken,
-} from '../helpers/asyncStorage'
-import { signIn, validateSession } from '../services/auth'
+} from '#/helpers/asyncStorage'
+import { signIn, validateSession } from '#/services/auth'
 
 const AuthContext = createContext({ signed: true })
 

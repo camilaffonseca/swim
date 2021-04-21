@@ -1,11 +1,11 @@
 import AsyncStorage from '@react-native-community/async-storage'
 
-const appPrefix = '@TestprojectReactnativeStylesheet'
+import { authTokenNameKey } from '#/constants/storage'
 
-export const getStoragedToken = () => AsyncStorage.getItem(`${appPrefix}:token`)
+export const getStoragedToken = () => AsyncStorage.getItem(authTokenNameKey)
 
 export const setStoragedToken = value =>
-  AsyncStorage.setItem(`${appPrefix}:token`, value)
+  AsyncStorage.setItem(authTokenNameKey, value)
 
 export const removeStoragedToken = () =>
-  AsyncStorage.removeItem(`${appPrefix}:token`)
+  AsyncStorage.removeItem(authTokenNameKey)

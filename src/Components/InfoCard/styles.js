@@ -1,17 +1,17 @@
 import { StyleSheet } from 'react-native'
 
-import { white, black, lightGray, gray } from '../../modules/colors'
+import colors from '#/constants/colors'
 
 export default StyleSheet.create({
   container: {
     borderWidth: 1,
-    backgroundColor: white,
+    backgroundColor: colors.white,
     flexDirection: 'row',
     borderRadius: 8,
     paddingHorizontal: 18,
     paddingVertical: 10,
-    borderColor: lightGray,
-    shadowColor: black,
+    borderColor: colors.lightGray,
+    shadowColor: colors.black,
     shadowOpacity: 0.08,
     shadowRadius: 20,
     shadowOffset: { width: 0, height: 10 },
@@ -25,5 +25,5 @@ export default StyleSheet.create({
     flex: 1,
   },
   cardTitle: { fontSize: 22, fontWeight: '700', lineHeight: 24 },
-  cardDescription: { lineHeight: 16, color: gray },
+  cardDescription: { lineHeight: 16, color: colors.gray },
 })

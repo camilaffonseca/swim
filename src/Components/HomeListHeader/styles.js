@@ -1,13 +1,13 @@
-import { StyleSheet, Platform } from 'react-native'
+import { StyleSheet } from 'react-native'
 
-const getFontWeight = () => (Platform.OS === 'ios' ? '800' : 'bold')
+import { resolveByPlatform } from '#/helpers/resolvers'
 
 export default StyleSheet.create({
   title: {
     fontSize: 28,
     marginVertical: 32,
     lineHeight: 32,
-    fontWeight: getFontWeight(),
+    fontWeight: resolveByPlatform({ ios: '800', android: 'bold' }),
   },
   offersTitle: {
     fontSize: 22,

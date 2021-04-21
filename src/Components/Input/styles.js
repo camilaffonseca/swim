@@ -1,24 +1,24 @@
 import { StyleSheet } from 'react-native'
 
-import { gray, lightGray2, red } from '../../modules/colors'
+import colors from '#/constants/colors'
 
 export default StyleSheet.create({
   label: {
-    color: gray,
+    color: colors.gray,
   },
   input: {
     borderBottomWidth: StyleSheet.hairlineWidth,
-    borderBottomColor: lightGray2,
+    borderBottomColor: colors.lightGray2,
     height: 36,
   },
   inputError: {
-    borderBottomColor: red,
+    borderBottomColor: colors.red,
   },
   errorTextColor: {
-    color: red,
+    color: colors.red,
   },
   errorText: {
     fontSize: 10,
-    position: 'relative'
-  }
+    position: 'relative',
+  },
 })

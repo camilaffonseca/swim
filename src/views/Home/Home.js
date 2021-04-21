@@ -1,17 +1,17 @@
 import React from 'react'
-import { SafeAreaView, View, FlatList, StatusBar } from 'react-native'
+import { SafeAreaView, View, FlatList } from 'react-native'
 
-import OffersInfo from '../../Components/OffersInfo'
-import HomeListHeader from '../../Components/HomeListHeader'
-import Separator from '../../Components/Separator'
+import OffersInfo from '#/components/OffersInfo'
+import HomeListHeader from '#/components/HomeListHeader'
+import Separator from '#/components/Separator'
 
 import styles from './styles'
 
 const offersInfoData = [
   {
     id: 1,
-    image: require('../../images/offersInfoImages/haircut-image.png'),
-    logo: require('../../images/offersInfoImages/haircut-logo.png'),
+    image: require('#/images/offersInfoImages/haircut-image.png'),
+    logo: require('#/images/offersInfoImages/haircut-logo.png'),
     name: 'HAIRCUT',
     description: 'Get a discount on your first hair cut and blow dry.',
     oldPrice: '$ 10,99',
@@ -20,8 +20,8 @@ const offersInfoData = [
   },
   {
     id: 2,
-    image: require('../../images/offersInfoImages/mcdonalds-image.png'),
-    logo: require('../../images/offersInfoImages/mcdonalds-logo.png'),
+    image: require('#/images/offersInfoImages/mcdonalds-image.png'),
+    logo: require('#/images/offersInfoImages/mcdonalds-logo.png'),
     name: "MCDONALD'S",
     description:
       "Big Mac® or Quarter Pounder® - Half Price at McDonnald's San Diego.",

@@ -1,21 +1,21 @@
 import { StyleSheet } from 'react-native'
 
-import { yellow, white, blue } from '../../modules/colors'
+import colors from '#/constants/colors'
 
 export default StyleSheet.create({
   background: {
     height: '100%',
     minHeight: 100,
-    justifyContent: 'space-between'
+    justifyContent: 'space-between',
   },
   title: {
     fontSize: 36,
     lineHeight: 40,
     fontWeight: '700',
-    color: yellow,
+    color: colors.yellow,
     marginLeft: 16,
     marginBottom: 13,
-    maxWidth: 230
+    maxWidth: 230,
   },
   header: {
     flexDirection: 'row',
@@ -28,24 +28,24 @@ export default StyleSheet.create({
     resizeMode: 'contain',
   },
   form: {
-    paddingHorizontal: 16
+    paddingHorizontal: 16,
   },
   buttonText: {
-    color: white,
+    color: colors.white,
     fontSize: 16,
     fontWeight: '700',
-    lineHeight: 24
+    lineHeight: 24,
   },
   button: {
-    backgroundColor: blue,
+    backgroundColor: colors.blue,
     height: 48,
     borderRadius: 8,
     justifyContent: 'center',
     alignItems: 'center',
     marginHorizontal: 16,
-    marginBottom: 40
+    marginBottom: 40,
   },
   marginTopInput: {
-    marginTop: 28
-  }
+    marginTop: 28,
+  },
 })

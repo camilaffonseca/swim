@@ -1,11 +1,11 @@
 import { StyleSheet } from 'react-native'
 
-import { darkGray } from '../../modules/colors'
+import colors from '#/constants/colors'
 
 export default StyleSheet.create({
   textStyle: {
     fontSize: 12,
-    color: darkGray,
+    color: colors.darkGray,
     lineHeight: 16,
   },
 })

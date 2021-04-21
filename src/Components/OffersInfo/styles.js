@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-import { white, red, gray } from '../../modules/colors'
+import colors from '#/constants/colors'
 
 export default StyleSheet.create({
   infoContainer: {
@@ -24,12 +24,12 @@ export default StyleSheet.create({
     alignItems: 'center',
   },
   discountContainer: {
-    backgroundColor: red,
+    backgroundColor: colors.red,
     borderRadius: 4,
     paddingVertical: 4,
     paddingHorizontal: 4.5,
   },
-  offerName: { color: red, marginBottom: 2 },
+  offerName: { color: colors.red, marginBottom: 2 },
   offerDescription: {
     lineHeight: 20,
     fontWeight: '700',
@@ -37,7 +37,7 @@ export default StyleSheet.create({
     marginBottom: 8,
   },
   offerOldPrice: {
-    color: gray,
+    color: colors.gray,
     marginRight: 8,
     textDecorationLine: 'line-through',
     fontWeight: '700',
@@ -52,6 +52,6 @@ export default StyleSheet.create({
   offerDiscount: {
     lineHeight: 16,
     fontWeight: '700',
-    color: white,
+    color: colors.white,
   },
 })

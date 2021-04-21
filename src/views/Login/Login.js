@@ -1,20 +1,19 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import {
   SafeAreaView,
   View,
   Image,
-  TextInput,
   TouchableOpacity,
   KeyboardAvoidingView,
   Alert,
 } from 'react-native'
 import * as yup from 'yup'
 
-import TextComponent from '../../Components/TextComponent'
-import Input from '../../Components/Input'
+import TextComponent from '#/components/TextComponent'
+import Input from '#/components/Input'
 
-import { useUser } from '../../context/auth'
-const loginScreenImage = require('../../images/login-screen-image.png')
+import { useUser } from '#/context/auth'
+const loginScreenImage = require('#/images/login-screen-image.png')
 import styles from './styles'
 
 const validationSchema = yup.object().shape({
@@ -33,7 +32,7 @@ const Login = () => {
   const [password, setPassword] = useState('')
   const [errors, setErrors] = useState('')
 
-  const { login } = useUser()
+  const { login, loading } = useUser()
 
   const handleLogin = async () => {
     try {
@@ -94,8 +93,13 @@ const Login = () => {
           style={styles.marginTopInput}
         />
       </KeyboardAvoidingView>
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <TextComponent customStyle={styles.buttonText}>Sign in</TextComponent>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={loading ? undefined : handleLogin}
+        activeOpacity={loading ? 1 : 0.2}>
+        <TextComponent customStyle={styles.buttonText}>
+          {loading ? 'Loading...' : 'Sign in'}
+        </TextComponent>
       </TouchableOpacity>
     </SafeAreaView>
   )
