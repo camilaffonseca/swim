@@ -10,7 +10,7 @@ export default StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 18,
     paddingVertical: 10,
-    borderColor: colors.lightGray,
+    borderColor: colors.lightGray1,
     shadowColor: colors.black,
     shadowOpacity: 0.08,
     shadowRadius: 20,
