@@ -27,4 +27,9 @@ target 'TestprojectReactnativeStylesheet' do
   post_install do |installer|
     react_native_post_install(installer)
   end
+
+  permissions_path = '../node_modules/react-native-permissions/ios'
+
+  pod 'Permission-LocationWhenInUse', :path => "#{permissions_path}/LocationWhenInUse"
+  pod 'Permission-LocationAccuracy', :path => "#{permissions_path}/LocationAccuracy"
 end
